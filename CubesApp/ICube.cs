@@ -1,0 +1,12 @@
+﻿namespace CubesApp
+{
+    interface ICube : IFigure3D
+    {
+        double X1();
+        double X2();
+        double Y1();
+        double Y2();
+        double Z1();
+        double Z2();
+    }
+}
