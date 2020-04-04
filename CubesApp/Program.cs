@@ -28,6 +28,8 @@ namespace CubesApp
             Console.WriteLine("Cuboid 1 Z2: " + cuboid1.Z2());
             Console.WriteLine("Cuboid 1 volume is: " + cuboid1.Volume());
 
+            Console.WriteLine("Intersection Volume is: " + cuboid1.GetIntersectionVolume(cube1));
+
             Console.ReadKey();
         }
     }

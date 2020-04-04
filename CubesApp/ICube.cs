@@ -8,5 +8,6 @@
         double Y2();
         double Z1();
         double Z2();
+        double GetIntersectionVolume(ICube cuboid);
     }
 }
