@@ -1,6 +1,6 @@
 ﻿namespace CubesApp
 {
-    interface IFigure3D
+    public interface IFigure3D
     {
         double Volume();
     }

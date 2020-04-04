@@ -2,7 +2,7 @@
 
 namespace CubesApp
 {
-    class Cuboid : ICube
+    public class Cuboid : ICube
     {
         public double xPosition { get; set; }
         public double yPosition { get; set; }
@@ -16,9 +16,9 @@ namespace CubesApp
             xPosition = x;
             yPosition = y;
             zPosition = z;
-            lengthX = lenX;
-            lengthY = lenY;
-            lengthZ = lenZ;
+            lengthX = Math.Abs(lenX);
+            lengthY = Math.Abs(lenY);
+            lengthZ = Math.Abs(lenZ);
         }
 
         public virtual double X1()
@@ -67,20 +67,7 @@ namespace CubesApp
 
         private double GetIntersectionSegment(double a1, double a2, double b1, double b2)
         {
-            double intersectionSegment;
-            double maxBound;
-
-            if(a1 <= b1)
-            {
-                maxBound = Math.Min(a2, b2);
-                intersectionSegment = Math.Max(maxBound - b1, 0);
-            }
-            else
-            {
-                intersectionSegment = GetIntersectionSegment(b1, b2, a1, a2);
-            }
-
-            return intersectionSegment;
+            return Math.Max(Math.Min(a2, b2) - Math.Max(a1, b1), 0);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace CubesApp
 {
-    interface ICube : IFigure3D
+    public interface ICube : IFigure3D
     {
         double X1();
         double X2();
