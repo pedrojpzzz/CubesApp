@@ -65,7 +65,7 @@ namespace CubesApp
             return new Cuboid(0, 0, 0, xSegment, ySegment, zSegment).Volume();
         }
 
-        private double GetIntersectionSegment(double a1, double a2, double b1, double b2)
+        internal static double GetIntersectionSegment(double a1, double a2, double b1, double b2)
         {
             return Math.Max(Math.Min(a2, b2) - Math.Max(a1, b1), 0);
         }
